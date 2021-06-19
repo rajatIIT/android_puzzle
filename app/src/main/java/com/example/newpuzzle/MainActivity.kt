@@ -197,7 +197,7 @@ class MainActivity : AppCompatActivity() {
 
                 var time = "".plus(m).plus(":").plus(s)
 
-                layout.timer.setText(time)
+                layout.timer.text = time
             }
 
             override fun onFinish() {
@@ -340,6 +340,7 @@ class MainActivity : AppCompatActivity() {
         drawableStructures[emptyTile]?.drawable = null
         sync()
         shuffle("easy")
+        startTimer()
     }
 
 
