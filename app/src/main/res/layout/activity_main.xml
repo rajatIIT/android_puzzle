@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:id="@+id/outer">
+
+
+    <LinearLayout
+        android:background="@drawable/wooden"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:id="@+id/topbar"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:scaleType="fitCenter"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@drawable/redback"
+            android:src="@drawable/refresh"
+            android:id="@+id/refresh"
+            android:onClick="refresh"
+            />
+
+
+        <ImageView
+            android:layout_marginLeft="30dp"
+            android:scaleType="fitCenter"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@drawable/redback"
+            android:src="@drawable/shuffle"
+            android:id="@+id/shuffle"
+            android:onClick="shuffleButtonClick"
+            />
+
+        <ImageView
+            android:layout_marginLeft="30dp"
+            android:scaleType="fitCenter"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@drawable/redback"
+            android:src="@drawable/next"
+            android:id="@+id/next"
+            android:onClick="downloadAndInitialize"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="#2B2B2B"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="00:00"
+            android:textColor="@color/lightgray"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:text="Score:"
+            android:textColor="@color/lightgray"
+            android:textSize="18dp"
+            android:backgroundTint="#2B2B2B"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#2B2B2B"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="0"
+            android:textColor="@color/lightgray"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/back"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="95"
+        android:id="@+id/container"
+        android:weightSum="4"
+        android:padding="5dp"
+        >
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shuffleContainer">
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:background="@drawable/wooden"
+                android:text="Easy Shuffle"
+                android:textSize="13dp"
+                app:backgroundTint="@null"
+                android:onClick="shuffleeasy"
+                />
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:background="@drawable/wooden"
+                android:text="Medium Shuffle"
+                android:textSize="13dp"
+                app:backgroundTint="@null"
+                android:onClick="shufflemedium"
+                />
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:background="@drawable/wooden"
+                android:text="Hard Shuffle"
+                android:textSize="13dp"
+                app:backgroundTint="@null"
+                android:onClick="shufflehard"
+                />
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:background="@drawable/wooden"
+                android:text="Extreme Shuffle"
+                android:textSize="13dp"
+                app:backgroundTint="@null"
+                android:onClick="shuffleextreme"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
